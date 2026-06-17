@@ -1,0 +1,37 @@
+:root{
+
+    /* Main Colors */
+
+    --primary-color:#7c3aed;
+    --secondary-color:#38bdf8;
+    --pink-color:#f472b6;
+    --cyan-color:#22d3ee;
+
+    /* Text */
+
+    --white-color:#ffffff;
+    --black-color:#111827;
+    --text-light:#dbeafe;
+
+    /* Glass */
+
+    --glass-bg:rgba(255,255,255,0.15);
+    --glass-border:rgba(255,255,255,0.25);
+
+    /* Shadow */
+
+    --shadow:0 8px 32px rgba(31,38,135,0.25);
+
+    /* Radius */
+
+    --radius:25px;
+
+    /* Blur */
+
+    --blur:30px;
+
+    /* Extra */
+
+    --primary-purple:#8b5cf6;
+    --primary-blue:#38bdf8;
+}
