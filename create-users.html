@@ -13,22 +13,21 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href=" css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/varaible.css">
     <link rel="stylesheet" href="css/side.css">
     <link rel="stylesheet" href="css/course.css">
     <link rel="stylesheet" href="css/create-course.css">
     <link rel="stylesheet" href="css/create-users.css">
+
 </head>
 
 <body>
 
     <div class="wrapper">
-
-        <!-- SIDEBAR -->
-
         <aside class="sidebar">
 
+            <!-- Logo -->
             <div class="sidebar-logo">
                 <img src="Images/logo.png" alt="Logo">
 
@@ -38,52 +37,30 @@
                 </div>
             </div>
 
+
+
+            <!-- SIDEBAR -->
+
             <ul class="sidebar-menu">
 
-                <li>
+                <li class="active">
                     <a href="Dashboard.html">
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
-                <!-- Users Menu -->
+                <!-- Users -->
                 <li class="has-submenu">
 
                     <div class="menu-header">
-
                         <div class="menu-title">
-                            <i class="bi bi-folder-plus"></i>
+                            <i class="bi bi-people-fill"></i>
                             <span>Users</span>
                         </div>
 
                         <i class="bi bi-chevron-down arrow"></i>
-
                     </div>
-
-                    <ul class="submenu">
-
-                        <li>
-                            <a href="course.html">
-                                <i class="bi bi-list-ul"></i>
-                                <span>All Users</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="create-course.html">
-                                <i class="bi bi-plus-circle"></i>
-                                <span>Create Users</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="addTopic.html">
-                                <i class="bi bi-plus-circle"></i>
-                                <span>Add Topic</span>
-                            </a>
-                        </li>
-
-                    </ul>
 
                     <ul class="submenu">
                         <li>
@@ -103,57 +80,47 @@
 
                 </li>
 
-                <!-- Courses Menu -->
+                <!-- Courses -->
                 <li class="has-submenu">
 
                     <div class="menu-header">
-
                         <div class="menu-title">
-                            <i class="bi bi-folder-plus"></i>
+                            <i class="bi bi-book-fill"></i>
                             <span>Courses</span>
                         </div>
 
                         <i class="bi bi-chevron-down arrow"></i>
-
                     </div>
 
                     <ul class="submenu">
-
-                        <li class="active">
+                        <li>
                             <a href="course.html">
                                 <i class="bi bi-list-ul"></i>
-                                <span>All Courses</span>
+                                <span> All Courses</span>
                             </a>
                         </li>
 
                         <li>
                             <a href="create-course.html">
                                 <i class="bi bi-plus-circle"></i>
-                                <span>Create Course</span>
+                                <span> Create Course</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="addTopic.html">
-                                <i class="bi bi-plus-circle"></i>
-                                <span>Add Topic</span>
-                            </a>
-                        </li>
-
                     </ul>
 
                 </li>
 
                 <li>
-                    <a href="comment.html">
-                        <i class="bi bi-file-earmark-text-fill"></i>
+                    <a href="#">
+                        <i class="bi bi-chat-left-text-fill"></i>
                         <span>Comments</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <i class="bi bi-credit-card-2-front-fill"></i>
-                        <span>Transaction</span>
+                        <i class="bi bi-credit-card-fill"></i>
+                        <span>Transactions</span>
                     </a>
                 </li>
 
@@ -172,39 +139,18 @@
                     </div>
 
                     <ul class="submenu">
-
                         <li>
-                            <a href="courses.html">
-                                <i class="bi bi-list-ul"></i>
-                                <span>Log User</span>
+                            <a href="#">
+                                <i class="bi bi-clock-history"></i>
+                                View Logs
                             </a>
                         </li>
-
-                        <li>
-                            <a href="create-course.html">
-                                <i class="bi bi-plus-circle"></i>
-                                <span>Block User
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="addTopic.html">
-                                <i class="bi bi-plus-circle"></i>
-                                <span>Add Topic
-                                </span>
-                            </a>
-                        </li>
-
                     </ul>
 
                 </li>
 
-                <li>
-                    <a href="comment.html">
-                        <i class="bi bi-person-fill"></i>
-                        <span>Comments</span>
-                    </a>
-                </li>
+
+
                 <li>
                     <a href="#">
                         <i class="bi bi-gear-fill"></i>
@@ -219,11 +165,9 @@
                     </a>
                 </li>
 
-            </ul>
+
 
         </aside>
-
-        <!-- CONTENT -->
 
         <main class="content">
 
@@ -232,47 +176,45 @@
             <nav class="topbar">
 
                 <h2>Hello Sharara</h2>
+
                 <div class="navbar-right">
 
                     <div class="search-box">
                         <i class="bi bi-search"></i>
                         <input type="text" placeholder="Search...">
                     </div>
-                    <!----Profile dropdown-->
+
                     <details class="profile-dropdown">
 
                         <summary class="profile">
-
                             <i class="bi bi-person-circle"></i>
                             <span>Admin</span>
-
                         </summary>
 
-                        <<div class="dropdown-menu">
+                        <div class="dropdown-menu">
                             <a href="#"><i class="bi bi-person"></i> My Profile</a>
                             <a href="#"><i class="bi bi-gear"></i> Settings</a>
                             <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
                         </div>
 
-                </div>    </details>
+                    </details>
+
+                </div>
 
             </nav>
 
-            <!-- MAIN GRID -->
-            <!-- CREATE COURSE HEADER -->
 
-            <div class="course-header">
+            <div class="page-header">
 
-                <a href="create-course.html" class="glass-btn">
-                    <i class="bi bi-plus-circle-fill"></i>
-                    Add Course
+                <h3>
+                    <i class="bi bi-person-plus-fill"></i>
+                    Create New User
+                </h3>
+
+                <a href="user.html" class="back-btn">
+                    <i class="bi bi-arrow-left-circle-fill"></i>
+                    Back to Users
                 </a>
-                <div class="course-title">
-                    <h3>
-                        <i class="bi bi-plus-circle-fill"></i>
-                        Create New Course
-                    </h3>
-                </div>
 
             </div>
 
@@ -284,79 +226,98 @@
 
                     <div class="form-grid">
 
-                        <!-- Course Title -->
+                        <!-- Full Name -->
 
                         <div class="form-group">
 
                             <label>
-                                <i class="bi bi-book-fill"></i>
-                                Course Title
+                                <i class="bi bi-person-fill"></i>
+                                Full Name
                             </label>
 
-                            <input type="text" placeholder="Enter course title">
+                            <input type="text" placeholder="Enter full name">
 
                         </div>
 
-                        <!-- Category -->
+                        <!-- Username -->
 
                         <div class="form-group">
 
                             <label>
-                                <i class="bi bi-tags-fill"></i>
-                                Category
+                                <i class="bi bi-at"></i>
+                                Username
+                            </label>
+
+                            <input type="text" placeholder="Enter username">
+
+                        </div>
+
+                        <!-- Email -->
+
+                        <div class="form-group">
+
+                            <label>
+                                <i class="bi bi-envelope-fill"></i>
+                                Email Address
+                            </label>
+
+                            <input type="email" placeholder="Enter email">
+
+                        </div>
+
+                        <!-- Phone -->
+
+                        <div class="form-group">
+
+                            <label>
+                                <i class="bi bi-telephone-fill"></i>
+                                Phone Number
+                            </label>
+
+                            <input type="text" placeholder="+93 700000000">
+
+                        </div>
+
+                        <!-- Password -->
+
+                        <div class="form-group">
+
+                            <label>
+                                <i class="bi bi-lock-fill"></i>
+                                Password
+                            </label>
+
+                            <input type="password" placeholder="Enter password">
+
+                        </div>
+
+                        <!-- Confirm Password -->
+
+                        <div class="form-group">
+
+                            <label>
+                                <i class="bi bi-shield-lock-fill"></i>
+                                Confirm Password
+                            </label>
+
+                            <input type="password" placeholder="Confirm password">
+
+                        </div>
+
+                        <!-- Role -->
+
+                        <div class="form-group">
+
+                            <label>
+                                <i class="bi bi-person-badge-fill"></i>
+                                User Role
                             </label>
 
                             <select>
 
-                                <option>Web Development</option>
-                                <option>Python</option>
-                                <option>Java</option>
-                                <option>Database</option>
-
-                            </select>
-
-                        </div>
-
-                        <!-- Instructor -->
-
-                        <div class="form-group">
-
-                            <label>
-                                <i class="bi bi-person-workspace"></i>
-                                Instructor Name
-                            </label>
-
-                            <input type="text" placeholder="Instructor Name">
-
-                        </div>
-
-                        <!-- Duration -->
-
-                        <div class="form-group">
-
-                            <label>
-                                <i class="bi bi-clock-fill"></i>
-                                Duration
-                            </label>
-
-                            <input type="text" placeholder="12 Weeks">
-
-                        </div>
-
-                        <!-- Level -->
-
-                        <div class="form-group">
-
-                            <label>
-                                <i class="bi bi-bar-chart-fill"></i>
-                                Course Level
-                            </label>
-
-                            <select>
-
-                                <option>Beginner</option>
-                                <option>Intermediate</option>
-                                <option>Advanced</option>
+                                <option>Student</option>
+                                <option>Instructor</option>
+                                <option>Admin</option>
 
                             </select>
 
@@ -374,7 +335,8 @@
                             <select>
 
                                 <option>Active</option>
-                                <option>Draft</option>
+                                <option>Blocked</option>
+                                <option>Pending</option>
 
                             </select>
 
@@ -382,26 +344,26 @@
 
                     </div>
 
-                    <!-- Description -->
+                    <!-- Address -->
 
                     <div class="form-group full-width">
 
                         <label>
-                            <i class="bi bi-card-text"></i>
-                            Course Description
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Address
                         </label>
 
-                        <textarea rows="5" placeholder="Enter course description..."></textarea>
+                        <textarea rows="4" placeholder="Enter address"></textarea>
 
                     </div>
 
-                    <!-- Upload -->
+                    <!-- Profile Photo -->
 
                     <div class="form-group full-width">
 
                         <label>
                             <i class="bi bi-image-fill"></i>
-                            Course Thumbnail
+                            Profile Photo
                         </label>
 
                         <input type="file">
@@ -418,8 +380,8 @@
                         </button>
 
                         <button type="submit" class="save-btn">
-                            <i class="bi bi-check-lg"></i>
-                            Save Course
+                            <i class="bi bi-person-check-fill"></i>
+                            Create User
                         </button>
 
                     </div>
@@ -427,15 +389,10 @@
                 </form>
 
             </div>
-
-
-
-
         </main>
-
     </div>
 
-</body>
+
 <script>
     document.querySelectorAll('.menu-header').forEach(menu => {
 
@@ -449,5 +406,5 @@
 
     });
 </script>
-
+</body>
 </html>

@@ -16,9 +16,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/varaible.css">
     <link rel="stylesheet" href="css/side.css">
-    <link rel="stylesheet" href="css/course.css">
-    <link rel="stylesheet" href="css/create-course.css">
-    <link rel="stylesheet" href="css/create-users.css">
+    <link rel="stylesheet" href="css/comment.css">
 
 </head>
 
@@ -45,10 +43,8 @@
 
                 <li class="active">
                     <a href="Dashboard.html">
-                        <div class="menu-title">
-                            <i class="bi bi-grid-fill"></i>
-                            <span>Dashboard</span>
-                        </div>
+                        <i class="bi bi-grid-fill"></i>
+                        <span>Dashboard</span>
                     </a>
                 </li>
 
@@ -78,6 +74,12 @@
                                 Create User
                             </a>
                         </li>
+                        <li>
+                            <a href="addTopic.html">
+                                <i class="bi bi-plus-circle"></i>
+                                Add Topic
+                            </a>
+                        </li>
                     </ul>
 
                 </li>
@@ -98,42 +100,31 @@
                         <li>
                             <a href="course.html">
                                 <i class="bi bi-list-ul"></i>
-                                All Courses
+                                <span> All Courses</span>
                             </a>
                         </li>
 
                         <li>
                             <a href="create-course.html">
                                 <i class="bi bi-plus-circle"></i>
-                                Create Course
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="addTopic.html">
-                                <i class="bi bi-plus-circle"></i>
-                                Add Topic
+                                <span> Create Course</span>
                             </a>
                         </li>
                     </ul>
 
                 </li>
 
-                 <li>
+                <li>
                     <a href="comment.html">
-                        <div class="menu-title">
-                            <i class="bi bi-grid-fill"></i>
-                            <span>Comment</span>
-                        </div>
+                        <i class="bi bi-chat-left-text-fill"></i>
+                        <span>Comments</span>
                     </a>
                 </li>
 
-                 <li>
+                <li>
                     <a href="#">
-                        <div class="menu-title">
-                            <i class="bi bi-grid-fill"></i>
-                            <span>Transactions</span>
-                        </div>
+                        <i class="bi bi-credit-card-fill"></i>
+                        <span>Transactions</span>
                     </a>
                 </li>
 
@@ -151,22 +142,30 @@
 
                     </div>
 
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">
+                                <i class="bi bi-clock-history"></i>
+                                View Logs
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+
 
                 <li>
                     <a href="#">
-                        <div class="menu-title">
-                            <i class="bi bi-grid-fill"></i>
-                            <span>Setting</span>
-                        </div>
+                        <i class="bi bi-gear-fill"></i>
+                        <span>Settings</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <div class="menu-title">
-                            <i class="bi bi-grid-fill"></i>
-                            <span>Logout</span>
-                        </div>
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Logout</span>
                     </a>
                 </li>
 
@@ -174,16 +173,10 @@
 
         </aside>
 
-
-
-        <!-- CONTENT -->
-
         <main class="content">
-
-            <!-- TOPBAR -->
             <nav class="topbar">
 
-                <h2>Hello Sharara </h2>
+                <h2>Hello Sharara</h2>
 
                 <div class="navbar-right">
 
@@ -192,16 +185,10 @@
                         <input type="text" placeholder="Search...">
                     </div>
 
-                    <!-- Dark Mode Button -->
-                    <button id="themeToggle" class="theme-btn">
-                        <i class="bi bi-moon-stars-fill"></i>
-                    </button>
-
-                    <!-- Profile -->
                     <details class="profile-dropdown">
 
                         <summary class="profile">
-                            <i class="bi bi-person-circle" ></i>
+                            <i class="bi bi-person-circle"></i>
                             <span>Admin</span>
                         </summary>
 
@@ -216,98 +203,140 @@
                 </div>
 
             </nav>
+<!-- ==========================
+     PAGE TITLE
+========================== -->
 
-            <!-- MAIN GRID -->
+            <div class="page-header">
+                <h2>
+                    <i class="bi bi-chat-left-text-fill"></i>
+                    Comments
+                </h2>
+            </div>
+<!-- ==========================
+     RECENT COMMENTS
+========================== -->
 
-            <div class="dashboard-grid">
+            <div class="comments-section">
 
-                <!-- LEFT -->
+                <h3>Recent Comments</h3>
 
-                <div>
+                <div class="comment-box">
 
-                    <div class="welcome-section">
-                        <h1>Welcome Back 👋</h1>
+                    <div class="comment-header">
 
-                        <p>
-                            Manage students, courses, assignments and track learning progress.
-                        </p>
+                        <div class="user-info">
+
+                            <div class="avatar">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+
+                            <div>
+                                <h4>Sharara Naderi</h4>
+                                <span><i class="bi bi-book"></i> HTML Course</span>
+                            </div>
+
+                        </div>
+
+                        <div class="comment-actions">
+
+                            <button class="edit-btn">
+                                <i class="bi bi-pencil-square"></i>
+                                Edit
+                            </button>
+
+                            <button class="delete-btn">
+                                <i class="bi bi-trash-fill"></i>
+                                Delete
+                            </button>
+
+                        </div>
+
                     </div>
 
-                    <!-- CARDS -->
-
-                    <section class="cards">
-
-                        <div class="card-box">
-                            <i class="bi bi-people-fill"></i>
-                            <h3>250</h3>
-                            <p>Total Students</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-book-fill"></i>
-                            <h3>20</h3>
-                            <p>Courses</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-eye"></i>
-                            <h3>45</h3>
-                            <p>View</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-person-workspace"></i>
-                            <h3>12</h3>
-                            <p>Instructors</p>
-                        </div>
-
-                    </section>
+                    <p>
+                        Excellent course! Everything was explained clearly and I enjoyed learning HTML.
+                    </p>
 
                 </div>
 
-                <!-- RIGHT -->
+ <!-- ==========================
+     COMMENT FORM
+========================== -->
 
-                <div>
+                <div class="comment-card">
 
-                    <section class="activity-section">
+                    <h3>
+                        <i class="bi bi-pencil-square"></i>
+                        Leave a Comment
+                    </h3>
 
-                        <h2>Recent Activity</h2>
+                    <form>
 
-                        <div class="activity-box">
+                        <div class="form-group">
 
-                            <p>📚 New Course Added - Web Development</p>
+                            <label>Your Name</label>
 
-                            <p>👨‍🎓 Student Enrolled in Python Course</p>
-
-                            <p>📝 Assignment Uploaded</p>
-
-                            <p>🎯 Quiz Scheduled For Next Week</p>
+                            <input type="text" placeholder="Enter your name">
 
                         </div>
 
-                    </section>
+                        <div class="form-group">
+
+                            <label>Course</label>
+
+                            <select>
+
+                                <option>Select Course</option>
+                                <option>HTML</option>
+                                <option>CSS</option>
+                                <option>JavaScript</option>
+                                <option>Python</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Your Comment</label>
+
+                            <textarea rows="6" placeholder="Write your comment here..."></textarea>
+
+                        </div>
+
+                        <div class="form-buttons">
+
+                            <button type="reset" class="cancel-btn">
+                                Reset
+                            </button>
+
+                            <button type="submit" class="save-btn">
+                                Submit Comment
+                            </button>
+
+                        </div>
+
+                    </form>
 
                 </div>
-
-            </div>
-
         </main>
-
     </div>
 
-</body>
-<script>
-    document.querySelectorAll('.menu-header').forEach(menu => {
 
-        menu.addEventListener('click', () => {
+    <script>
+        document.querySelectorAll('.menu-header').forEach(menu => {
 
-            const parent = menu.parentElement;
+            menu.addEventListener('click', () => {
 
-            parent.classList.toggle('active');
+                const parent = menu.parentElement;
+
+                parent.classList.toggle('active');
+
+            });
 
         });
-
-    });
-</script>
+    </script>
+</body>
 
 </html>

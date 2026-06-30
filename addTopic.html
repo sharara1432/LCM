@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/course.css">
     <link rel="stylesheet" href="css/create-course.css">
     <link rel="stylesheet" href="css/create-users.css">
+    <link rel="stylesheet" href="css/addCourse.css">    
 
 </head>
 
@@ -79,7 +80,7 @@
                                 <span>Create Users</span>
                             </a>
                         </li>
-                        
+
                         <li>
                             <a href="add-topics.html">
                                 <i class="bi bi-plus-circle"></i>
@@ -123,7 +124,7 @@
                         </li>
 
                         <li>
-                            <a href="addTopic.html">
+                            <a href="add-topics.html">
                                 <i class="bi bi-plus-circle"></i>
                                 <span>Add Topics</span>
                             </a>
@@ -134,7 +135,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="comment.html">
                         <i class="bi bi-file-earmark-text-fill"></i>
                         <span>Comments</span>
                     </a>
@@ -174,6 +175,13 @@
                             <a href="create-course.html">
                                 <i class="bi bi-plus-circle"></i>
                                 <span>Block User
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="addTopic.html">
+                                <i class="bi bi-plus-circle"></i>
+                                <span>Add Topic
                                 </span>
                             </a>
                         </li>
@@ -235,230 +243,131 @@
             </nav>
 
             <!-- MAIN GRID -->
-
-            <!-- COURSE HEADER -->
+            <!-- PAGE HEADER -->
 
             <div class="course-header">
 
                 <div class="course-title">
 
                     <h2>
-                        <i class="bi bi-mortarboard-fill"></i>
-                        All Courses
+                        <i class="bi bi-journal-plus"></i>
+                        Add New Topic
                     </h2>
-                </div>
 
-                <button class="glass-btn">
-                    <i class="bi bi-plus-circle-fill"></i>
-                    Add Course
-                </button>
+                </div>
 
             </div>
 
-            <!-- STATISTICS -->
+            <!-- ADD TOPIC FORM -->
 
-            <section class="course-stats">
+            <div class="topic-card">
 
-                <div class="stat-card">
-                    <i class="bi bi-book-fill"></i>
-                    <h3>25</h3>
-                    <p>Total Courses</p>
-                </div>
+                <form action="course.html">
 
-                <div class="stat-card">
-                    <i class="bi bi-people-fill"></i>
-                    <h3>450</h3>
-                    <p>Students</p>
-                </div>
+                    <div class="form-group">
 
-                <div class="stat-card">
-                    <i class="bi bi-check-circle-fill"></i>
-                    <h3>18</h3>
-                    <p>Active</p>
-                </div>
+                        <label>Course Name <span>*</span></label>
 
-                <div class="stat-card">
-                    <i class="bi bi-clock-fill"></i>
-                    <h3>7</h3>
-                    <p>Draft</p>
-                </div>
+                        <select required>
 
-            </section>
+                            <option>Select Course</option>
+                            <option>HTML</option>
+                            <option>CSS</option>
+                            <option>Bootstrap</option>
+                            <option>JavaScript</option>
+                            <option>Python</option>
+                            <option>Java</option>
 
-            <!-- SEARCH BAR -->
+                        </select>
 
-            <div class="course-toolbar">
+                    </div>
 
-                <div class="course-search">
+                    <div class="form-group">
 
-                    <i class="bi bi-search"></i>
+                        <label>Topic Title <span>*</span></label>
 
-                    <input type="text" placeholder="Search courses...">
+                        <input type="text" placeholder="Enter Topic Title" required>
 
-                </div>
+                    </div>
 
-                <select class="course-filter">
+                    <div class="form-group">
 
-                    <option>All Categories</option>
-                    <option>Programming</option>
-                    <option>Web Development</option>
-                    <option>Java</option>
-                    <option>JavaScript</option>
+                        <label>Topic Number</label>
 
-                </select>
+                        <input type="number" value="1">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Topic Description</label>
+
+                        <textarea rows="6" placeholder="Write topic description..."></textarea>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Video Link (Optional)</label>
+
+                        <input type="url" placeholder="https://youtube.com/...">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>PDF / Notes (Optional)</label>
+
+                        <input type="file">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Duration</label>
+
+                        <input type="text" value="30 Minutes">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+
+                        <div class="status-group">
+
+                            <label class="status-option">
+                                <input type="radio" name="status" checked>
+                                <span>Published</span>
+                            </label>
+
+                            <label class="status-option">
+                                <input type="radio" name="status">
+                                <span>Draft</span>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+
+                        <button type="reset" class="cancel-btn">
+
+                            Reset
+
+                        </button>
+
+                        <button type="submit" class="save-btn">
+
+                            <i class="bi bi-save"></i>
+                            Save Topic
+
+                        </button>
+
+                    </div>
+
+                </form>
 
             </div>
-
-            <!-- TABLE -->
-
-            <div class="course-table-container">
-
-                <table class="course-table">
-
-                    <thead>
-
-                        <tr>
-
-                            <th>ID</th>
-                            <th>Course Name</th>
-                            <th>Instructor</th>
-                            <th>Students</th>
-                            <th>Duration</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-
-                            <td>C001</td>
-
-                            <td>
-                                <i class="bi bi-laptop"></i>
-                                Web Development
-                            </td>
-
-                            <td>Bashir Hussian. Ebrahimi</td>
-
-                            <td>120</td>
-
-                            <td>12 Weeks</td>
-
-                            <td>
-                                <span class="status active-status">
-                                    Active
-                                </span>
-                            </td>
-
-                            <td>
-
-                                <button class="action-btn">
-                                    <i class="bi bi-eye-fill"></i>
-                                </button>
-
-                                <button class="action-btn">
-                                    <i class="bi bi-pencil-fill"></i>
-                                </button>
-
-                                <button class="action-btn delete-btn">
-                                    <i class="bi bi-trash-fill"></i>
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>C002</td>
-
-                            <td>
-                                <i class="bi bi-filetype-py"></i>
-                                Python Programming
-                            </td>
-
-                            <td>Bashir H. Ebrahimi</td>
-
-                            <td>95</td>
-
-                            <td>10 Weeks</td>
-
-                            <td>
-                                <span class="status draft-status">
-                                    Draft
-                                </span>
-                            </td>
-
-                            <td>
-
-                                <button class="action-btn">
-                                    <i class="bi bi-eye-fill"></i>
-                                </button>
-
-                                <button class="action-btn">
-                                    <i class="bi bi-pencil-fill"></i>
-                                </button>
-
-                                <button class="action-btn delete-btn">
-                                    <i class="bi bi-trash-fill"></i>
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td>C003</td>
-
-                            <td>
-                                <i class="bi bi-cup-hot-fill"></i>
-                                Java Programming
-                            </td>
-
-                            <td>Bashir H. Ebrahimi</td>
-
-                            <td>78</td>
-
-                            <td>8 Weeks</td>
-
-                            <td>
-                                <span class="status active-status">
-                                    Active
-                                </span>
-                            </td>
-
-                            <td>
-
-                                <button class="action-btn">
-                                    <i class="bi bi-eye-fill"></i>
-                                </button>
-
-                                <button class="action-btn">
-                                    <i class="bi bi-pencil-fill"></i>
-                                </button>
-
-                                <button class="action-btn delete-btn">
-                                    <i class="bi bi-trash-fill"></i>
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-
-
-
 
 
         </main>
