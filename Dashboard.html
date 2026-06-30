@@ -13,34 +13,31 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href=" css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/varaible.css">
-    <link rel="stylesheet" href="css/side.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/course.css">
+    <link rel="stylesheet" href="css/Create-Course.css">
 </head>
 
 <body>
 
-    <!-- BACKGROUND BUBBLES -->
-
-    <div class="bubble bubble-1"></div>
-    <div class="bubble bubble-2"></div>
-    <div class="bubble bubble-3"></div>
-    <div class="bubble bubble-4"></div>
-    <div class="bubble bubble-5"></div>
-
     <div class="wrapper">
+    <aside class="sidebar">
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
+        <!-- Logo -->
+        <div class="sidebar-logo">
+            <img src="Images/logo.png" alt="Logo">
 
-            <div class="sidebar-logo">
-                <img src="Images/logo.png" alt="Logo">
-
-                <div class="logo-text">
-                    <h2>TechBright</h2>
-                    <p>Computer Learning</p>
-                </div>
+            <div class="logo-text">
+                <h2>TechBright</h2>
+                <p>Computer Learning</p>
             </div>
+        </div>
+
+      
+
+            <!-- SIDEBAR -->
 
             <ul class="sidebar-menu">
 
@@ -51,249 +48,224 @@
                     </a>
                 </li>
 
-                <!-- Users Menu -->
+                <!-- Users -->
                 <li class="has-submenu">
 
                     <div class="menu-header">
-
                         <div class="menu-title">
-                            <i class="bi bi-folder-plus"></i>
+                            <i class="bi bi-people-fill"></i>
                             <span>Users</span>
                         </div>
 
                         <i class="bi bi-chevron-down arrow"></i>
-
                     </div>
 
                     <ul class="submenu">
-
                         <li>
-                            <a href="courses.html">
+                            <a href="#">
                                 <i class="bi bi-list-ul"></i>
-                                <span>All Users</span>
+                                All Users
                             </a>
                         </li>
 
                         <li>
-                            <a href="create-course.html">
+                            <a href="#">
                                 <i class="bi bi-plus-circle"></i>
-                                <span>Create Users</span>
+                                Create User
                             </a>
                         </li>
-
                     </ul>
 
                 </li>
 
-                <!-- Courses Menu -->
+                <!-- Courses -->
                 <li class="has-submenu">
 
                     <div class="menu-header">
-
                         <div class="menu-title">
-                            <i class="bi bi-folder-plus"></i>
+                            <i class="bi bi-book-fill"></i>
                             <span>Courses</span>
                         </div>
 
                         <i class="bi bi-chevron-down arrow"></i>
-
                     </div>
 
                     <ul class="submenu">
-
-                        <li class="active">
-                            <a href="course.html">
+                        <li>
+                            <a href="#">
                                 <i class="bi bi-list-ul"></i>
-                                <span>All Courses</span>
+                                All Courses
                             </a>
                         </li>
 
                         <li>
-                            <a href="create-course.html">
+                            <a href="#">
                                 <i class="bi bi-plus-circle"></i>
-                                <span>Create Course</span>
+                                Create Course
                             </a>
                         </li>
-
                     </ul>
 
                 </li>
 
                 <li>
                     <a href="#">
-                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <i class="bi bi-chat-left-text-fill"></i>
                         <span>Comments</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <i class="bi bi-credit-card-2-front-fill"></i>
-                        <span>Transaction</span>
+                        <i class="bi bi-credit-card-fill"></i>
+                        <span>Transactions</span>
                     </a>
-                </li>
-
-                <!-- Activity Log Menu -->
-                <li class="has-submenu">
-
-                    <div class="menu-header">
-
-                        <div class="menu-title">
-                            <i class="bi bi-folder-plus"></i>
-                            <span>Activity Logs</span>
-                        </div>
-
-                        <i class="bi bi-chevron-down arrow"></i>
-
-                    </div>
-
-                    <ul class="submenu">
-
-                        <li>
-                            <a href="courses.html">
-                                <i class="bi bi-list-ul"></i>
-                                <span>Log User</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="create-course.html">
-                                <i class="bi bi-plus-circle"></i>
-                                <span>Block User
-                                </span>
-                            </a>
-                        </li>
-
-                    </ul>
-
                 </li>
 
                 <li>
                     <a href="#">
-                        <i class="bi bi-list"></i>
-                        <span>Add Menu</span>
+                        <i class="bi bi-person-fill"></i>
+                        <span>My Profile</span>
                     </a>
                 </li>
 
+
+
+                <li>
+                    <a href="settings.html">
+                        <i class="bi bi-gear-fill"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
             </ul>
 
-        </aside>
+    </aside>
 
 
 
-        <!-- CONTENT -->
+    <!-- CONTENT -->
 
-        <main class="content">
+    <main class="content">
 
-            <!-- TOPBAR -->
+        <!-- TOPBAR -->
+        <nav class="topbar">
 
-            <nav class="topbar">
+            <h2>Hello Sharara </h2>
 
-                <h2>Hello Sharara</h2>
+            <div class="navbar-right">
 
-                <div class="navbar-right">
-
-                    <div class="search-box">
-                        <i class="bi bi-search"></i>
-                        <input type="text" placeholder="Search...">
-                    </div>
-                    <!----Profile dropdown-->
-                    <details class="profile-dropdown">
-
-                        <summary class="profile">
-
-                            <i class="bi bi-person-circle"></i>
-                            <span>Admin</span>
-
-                        </summary>
-
-                        <div class="dropdown-menu">
-
-                            <a href="#">My Profile</a>
-                            <a href="#">Settings</a>
-                            <a href="#">Logout</a>
-
-                        </div>
-
-                    </details>
-
-            </nav>
-
-            <!-- MAIN GRID -->
-
-            <div class="dashboard-grid">
-
-                <!-- LEFT -->
-
-                <div>
-
-                    <div class="welcome-section">
-                        <h1>Welcome Back 👋</h1>
-
-                        <p>
-                            Manage students, courses, assignments and track learning progress.
-                        </p>
-                    </div>
-
-                    <!-- CARDS -->
-
-                    <section class="cards">
-
-                        <div class="card-box">
-                            <i class="bi bi-people-fill"></i>
-                            <h3>250</h3>
-                            <p>Total Students</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-book-fill"></i>
-                            <h3>20</h3>
-                            <p>Courses</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-file-earmark-text-fill"></i>
-                            <h3>45</h3>
-                            <p>Assignments</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-person-workspace"></i>
-                            <h3>12</h3>
-                            <p>Instructors</p>
-                        </div>
-
-                    </section>
-
+                <div class="search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search...">
                 </div>
 
-                <!-- RIGHT -->
+                <!-- Dark Mode Button -->
+                <button id="themeToggle" class="theme-btn">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
 
-                <div>
+                <!-- Profile -->
+                <details class="profile-dropdown">
 
-                    <section class="activity-section">
+                    <summary class="profile">
+                        <i class="bi bi-person-circle"></i>
+                        <span>Admin</span>
+                    </summary>
 
-                        <h2>Recent Activity</h2>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="bi bi-person"></i> My Profile</a>
+                        <a href="#"><i class="bi bi-gear"></i> Settings</a>
+                        <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                    </div>
 
-                        <div class="activity-box">
-
-                            <p>📚 New Course Added - Web Development</p>
-
-                            <p>👨‍🎓 Student Enrolled in Python Course</p>
-
-                            <p>📝 Assignment Uploaded</p>
-
-                            <p>🎯 Quiz Scheduled For Next Week</p>
-
-                        </div>
-
-                    </section>
-
-                </div>
+                </details>
 
             </div>
 
-        </main>
+        </nav>
+
+        <!-- MAIN GRID -->
+
+        <div class="dashboard-grid">
+
+            <!-- LEFT -->
+
+            <div>
+
+                <div class="welcome-section">
+                    <h1>Welcome Back 👋</h1>
+
+                    <p>
+                        Manage students, courses, assignments and track learning progress.
+                    </p>
+                </div>
+
+                <!-- CARDS -->
+
+                <section class="cards">
+
+                    <div class="card-box">
+                        <i class="bi bi-people-fill"></i>
+                        <h3>250</h3>
+                        <p>Total Students</p>
+                    </div>
+
+                    <div class="card-box">
+                        <i class="bi bi-book-fill"></i>
+                        <h3>20</h3>
+                        <p>Courses</p>
+                    </div>
+
+                    <div class="card-box">
+                        <i class="bi bi-eye"></i>
+                        <h3>45</h3>
+                        <p>View</p>
+                    </div>
+
+                    <div class="card-box">
+                        <i class="bi bi-person-workspace"></i>
+                        <h3>12</h3>
+                        <p>Instructors</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div>
+
+                <section class="activity-section">
+
+                    <h2>Recent Activity</h2>
+
+                    <div class="activity-box">
+
+                        <p>📚 New Course Added - Web Development</p>
+
+                        <p>👨‍🎓 Student Enrolled in Python Course</p>
+
+                        <p>📝 Assignment Uploaded</p>
+
+                        <p>🎯 Quiz Scheduled For Next Week</p>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
 
     </div>
 

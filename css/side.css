@@ -1,100 +1,41 @@
-/* ======================
-   SUB MENU
-====================== */
+.sidebar{
+    width:280px;
 
-.has-submenu{
-    flex-direction:column !important;
-    align-items:stretch !important;
-    padding:0 !important;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    flex-shrink:0;
+
+    background:linear-gradient(
+        180deg,
+        #113077 0%,
+        #0a2766 40%,
+        #102c5c 100%
+    );
+
+    padding:25px 18px;
+
     overflow:hidden;
+
+    position:sticky;
+    top:0;
 }
 
-.menu-header{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:15px 18px;
-
-    cursor:pointer;
-}
-
-.menu-title{
-
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.arrow{
-
-    transition:.3s;
-}
-
-.submenu{
+.sidebar-menu{
+    flex:1;
+    overflow-y:auto;
 
     list-style:none;
-
-    max-height:0;
-
-    overflow:hidden;
-
-    transition:max-height .4s ease;
-
     padding:0;
-    margin:0;
 }
 
-.submenu li{
-
-    margin:8px 12px;
-
-    padding:12px 15px;
-
-    border-radius:12px;
-
-    background:rgba(255,255,255,.05);
-
-    display:flex;
-    align-items:center;
+.sidebar-menu::-webkit-scrollbar{
+    width:6px;
 }
 
-.submenu li:hover{
-
-    background:rgba(255,255,255,.15);
-
-    transform:none;
-}
-
-.active{
-    background:linear-gradient(
-    135deg,
-    #7c3aed,
-    #38bdf8
-    );
-}
-
-.submenu li a{
-
-    width:100%;
-
-    display:flex;
-    align-items:center;
-
-    gap:10px;
-
-    color:#fff;
-
-    text-decoration:none;
-}
-
-.has-submenu.active .submenu{
-
-    max-height:300px;
-}
-
-.has-submenu.active .arrow{
-
-    transform:rotate(180deg);
+.sidebar-menu::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.2);
+    border-radius:10px;
 }
