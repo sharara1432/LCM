@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="css/course.css">
     <link rel="stylesheet" href="css/create-course.css">
     <link rel="stylesheet" href="css/create-users.css">
-    <link rel="stylesheet" href="css/addCourse.css">    
+    <link rel="stylesheet" href="css/addCourse.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
 </head>
 
@@ -302,7 +303,8 @@
 
                         <label>Topic Description</label>
 
-                        <textarea rows="6" placeholder="Write topic description..."></textarea>
+                        <div id="editor"></div>
+
 
                     </div>
 
@@ -375,18 +377,56 @@
     </div>
 
 </body>
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
 <script>
-    document.querySelectorAll('.menu-header').forEach(menu => {
 
-        menu.addEventListener('click', () => {
+document.querySelectorAll('.menu-header').forEach(menu => {
 
-            const parent = menu.parentElement;
+    menu.addEventListener('click', () => {
 
-            parent.classList.toggle('active');
+        const parent = menu.parentElement;
 
-        });
+        parent.classList.toggle('active');
 
     });
+
+});
+
+
+var quill = new Quill('#editor', {
+
+    theme: 'snow',
+
+    modules: {
+
+        toolbar: [
+
+            ['bold', 'italic', 'underline', 'strike'],
+
+            [{ header: [1,2,3,false] }],
+
+            [{ list: 'ordered' }, { list: 'bullet' }],
+
+            [{ align: [] }],
+
+            [{ color: [] }, { background: [] }],
+
+            [{ size: ['small', false, 'large', 'huge'] }],
+
+            ['link'],
+
+            ['clean']
+
+        ]
+
+    }
+
+});
+
+</script>
+
+
 </script>
 
 </html>

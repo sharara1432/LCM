@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/course.css">
     <link rel="stylesheet" href="css/create-course.css">
     <link rel="stylesheet" href="css/create-users.css">
+    <link rel="stylesheet" href="css/transaction.css">
 
 </head>
 
@@ -205,136 +206,195 @@
         <!-- CONTENT -->
 
         <main class="content">
+            <!-- Topbar -->
+        <nav class="topbar">
 
-            <!-- TOPBAR -->
-            <nav class="topbar">
+            <h2>Hello Sharara</h2>
 
-                <h2>Hello Sharara </h2>
+            <div class="navbar-right">
 
-                <div class="navbar-right">
+                <div class="search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
 
-                    <div class="search-box">
-                        <i class="bi bi-search"></i>
-                        <input type="text" placeholder="Search...">
+                <details class="profile-dropdown">
+
+                    <summary class="profile">
+                        <i class="bi bi-person-circle"></i>
+                        <span>Admin</span>
+                    </summary>
+
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="bi bi-person"></i> My Profile</a>
+                        <a href="#"><i class="bi bi-gear"></i> Settings</a>
+                        <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
                     </div>
 
-                    <!-- Dark Mode Button -->
-                    <button id="themeToggle" class="theme-btn">
-                        <i class="bi bi-moon-stars-fill"></i>
-                    </button>
-
-                    <!-- Profile -->
-                    <details class="profile-dropdown">
-
-                        <summary class="profile">
-                            <i class="bi bi-person-circle"></i>
-                            <span>Admin</span>
-                        </summary>
-
-                        <div class="dropdown-menu">
-                            <a href="#"><i class="bi bi-person"></i> My Profile</a>
-                            <a href="#"><i class="bi bi-gear"></i> Settings</a>
-                            <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
-                        </div>
-
-                    </details>
-
-                </div>
-
-            </nav>
-
-            <!-- MAIN GRID -->
-
-            <div class="dashboard-grid">
-
-                <!-- LEFT -->
-
-                <div>
-
-                    <div class="welcome-section">
-                        <h1>Welcome Back 👋</h1>
-
-                        <p>
-                            Manage students, courses, assignments and track learning progress.
-                        </p>
-                    </div>
-
-
-                    <!-- CARDS -->
-
-                    <section class="cards">
-
-                        <div class="card-box">
-                            <i class="bi bi-people-fill"></i>
-                            <h3>250</h3>
-                            <p>Total Students</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-book-fill"></i>
-                            <h3>20</h3>
-                            <p>Courses</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-eye"></i>
-                            <h3>45</h3>
-                            <p>View</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-person-workspace"></i>
-                            <h3>12</h3>
-                            <p>Instructors</p>
-                        </div>
-
-                    </section>
-
-                </div>
-
-                <!-- RIGHT -->
-
-                <div>
-
-                    <section class="activity-section">
-
-                        <h2>Recent Activity</h2>
-
-                        <div class="activity-box">
-
-                            <p>📚 New Course Added - Web Development</p>
-
-                            <p>👨‍🎓 Student Enrolled in Python Course</p>
-
-                            <p>📝 Assignment Uploaded</p>
-
-                            <p>🎯 Quiz Scheduled For Next Week</p>
-
-                        </div>
-
-                    </section>
-
-                </div>
+                </details>
 
             </div>
 
-        </main>
+        </nav>
 
+
+
+            <!-- ===========================
+     PAGE HEADER
+=========================== -->
+
+<div class="page-header">
+
+    <div class="page-title">
+        <h2>
+            <i class="bi bi-clock-history"></i>
+            All Activities
+        </h2>
+        <p>Monitor all activities performed in the TechBright LMS.</p>
     </div>
 
-</body>
+</div>
+
+<!-- ===========================
+     SUMMARY CARDS
+=========================== -->
+
+<div class="summary-cards">
+
+    <div class="card-box">
+        <i class="bi bi-activity"></i>
+        <h3>2,540</h3>
+        <p>Total Activities</p>
+    </div>
+
+    <div class="card-box">
+        <i class="bi bi-person-check-fill"></i>
+        <h3>182</h3>
+        <p>Today's Activities</p>
+    </div>
+
+    <div class="card-box">
+        <i class="bi bi-check-circle-fill"></i>
+        <h3>2,486</h3>
+        <p>Successful</p>
+    </div>
+
+    <div class="card-box">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+        <h3>54</h3>
+        <p>Warnings</p>
+    </div>
+
+</div>
+
+<!-- ===========================
+     SEARCH BAR
+=========================== -->
+
+<div class="table-header">
+
+    <input type="text" placeholder="Search Activity...">
+
+    <button class="export-btn">
+        <i class="bi bi-download"></i>
+        Export Logs
+    </button>
+
+</div>
+
+<!-- ===========================
+     ACTIVITY TABLE
+=========================== -->
+
+<div class="table-container">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Date & Time</th>
+                <th>User</th>
+                <th>Role</th>
+                <th>Activity</th>
+                <th>Module</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>02 Jul 2026 - 09:15 AM</td>
+                <td>Sharara Naderi</td>
+                <td>Admin</td>
+                <td>Created HTML Course</td>
+                <td>Courses</td>
+                <td><span class="success">Success</span></td>
+                <td><button class="view-btn">View</button></td>
+            </tr>
+
+            <tr>
+                <td>02 Jul 2026 - 09:45 AM</td>
+                <td>Ahmed Ali</td>
+                <td>Student</td>
+                <td>Logged In</td>
+                <td>Authentication</td>
+                <td><span class="success">Success</span></td>
+                <td><button class="view-btn">View</button></td>
+            </tr>
+
+            <tr>
+                <td>02 Jul 2026 - 10:10 AM</td>
+                <td>Madina Qazizada</td>
+                <td>Student</td>
+                <td>Enrolled in CSS Course</td>
+                <td>Courses</td>
+                <td><span class="success">Success</span></td>
+                <td><button class="view-btn">View</button></td>
+            </tr>
+
+            <tr>
+                <td>02 Jul 2026 - 10:50 AM</td>
+                <td>Bashir Hussein Ebrahimi </td>
+                <td>Admin</td>
+                <td>Added New Topic</td>
+                <td>Topics</td>
+                <td><span class="success">Success</span></td>
+                <td><button class="view-btn">View</button></td>
+            </tr>
+
+            <tr>
+                <td>02 Jul 2026 - 01:15 PM</td>
+                <td>Sharara Naderi</td>
+                <td>Admin</td>
+                <td>Deleted Old Course</td>
+                <td>Courses</td>
+                <td><span class="warning">Deleted</span></td>
+                <td><button class="view-btn">View</button></td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+</main>
+
+</div>
+
 <script>
-    document.querySelectorAll('.menu-header').forEach(menu => {
-
-        menu.addEventListener('click', () => {
-
-            const parent = menu.parentElement;
-
-            parent.classList.toggle('active');
-
-        });
-
+document.querySelectorAll('.menu-header').forEach(menu=>{
+    menu.addEventListener('click',()=>{
+        menu.parentElement.classList.toggle('active');
     });
+});
 </script>
 
+</body>
 </html>
