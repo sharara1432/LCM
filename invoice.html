@@ -125,7 +125,7 @@
                     </a>
                 </li>
 
-                
+
                 <!-- Transactions Menu -->
 
                 <li class="has-submenu">
@@ -174,7 +174,7 @@
                     </a>
                 </li>
 
-                <li class="logout">
+                <li>
                     <a href="#">
                         <i class="bi bi-box-arrow-right"></i>
                         <span>Logout</span>
@@ -184,172 +184,153 @@
             </ul>
 
         </aside>
-
-        <!-- Content -->
         <main class="content">
 
-            <!-- Topbar -->
-            <nav class="topbar">
+            <!-- Page Title -->
+            <div class="page-header">
+                <h2>
+                    <i class="bi bi-receipt"></i>
+                    Billing / Invoice Management
+                </h2>
+            </div>
 
-                <h2>Hello Sharara</h2>
+            <!-- Invoice Form -->
+            <div class="invoice-form">
 
-                <div class="navbar-right">
+                <div class="row">
 
-                    <div class="search-box">
-                        <i class="bi bi-search"></i>
-                        <input type="text" placeholder="Search...">
+                    <div class="col-md-6 mb-3">
+                        <label>Invoice No</label>
+                        <input type="text" class="form-control" value="INV001">
                     </div>
 
-                    <details class="profile-dropdown">
+                    <div class="col-md-6 mb-3">
+                        <label>Date</label>
+                        <input type="date" class="form-control">
+                    </div>
 
-                        <summary class="profile">
-                            <i class="bi bi-person-circle"></i>
-                            <span>Admin</span>
-                        </summary>
+                    <div class="col-md-6 mb-3">
+                        <label>Student Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Student Name">
+                    </div>
 
-                        <div class="dropdown-menu">
-                            <a href="#"><i class="bi bi-person"></i> My Profile</a>
-                            <a href="#"><i class="bi bi-gear"></i> Settings</a>
-                            <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
-                        </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Course</label>
 
-                    </details>
+                        <select class="form-select">
+                            <option>HTML</option>
+                            <option>CSS</option>
+                            <option>JavaScript</option>
+                            <option>Python</option>
+                        </select>
+                    </div>
 
-                </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Total Amount</label>
+                        <input type="number" class="form-control" placeholder="$0">
+                    </div>
 
-            </nav>
+                    <div class="col-md-6 mb-3">
+                        <label>Payment Method</label>
 
-            <!-- Page Header -->
+                        <select class="form-select">
+                            <option>Cash</option>
+                            <option>Visa</option>
+                            <option>MasterCard</option>
+                            <option>Online</option>
+                        </select>
+                    </div>
 
-            <div class="page-header">
-
-                <h2>
-                    <i class="bi bi-credit-card-2-front-fill"></i>
-                    Transactions
-                </h2>
-
-            </div>
-
-            <!-- Cards -->
-
-            <div class="summary-cards">
-
-                <div class="card-box">
-                    <i class="bi bi-cash-stack"></i>
-                    <h3>$15,250</h3>
-                    <p>Total Revenue</p>
-                </div>
-
-                <div class="card-box">
-                    <i class="bi bi-wallet2"></i>
-                    <h3>248</h3>
-                    <p>Payments</p>
-                </div>
-
-                <div class="card-box">
-                    <i class="bi bi-hourglass-split"></i>
-                    <h3>12</h3>
-                    <p>Pending</p>
-                </div>
-
-                <div class="card-box">
-                    <i class="bi bi-arrow-counterclockwise"></i>
-                    <h3>5</h3>
-                    <p>Refunded</p>
                 </div>
 
             </div>
 
-            <!-- Search -->
+            <!-- Invoice History -->
+            <div class="invoice-history">
 
-            <div class="table-header">
+                <div class="table-header">
 
-                <input type="text" placeholder="Search Student">
+                    <h3>
+                        <i class="bi bi-clock-history"></i>
+                        Invoice History
+                    </h3>
 
-                <button class="export-btn">
-                    <i class="bi bi-download"></i>
-                    Export
-                </button>
+                    <div class="header-right">
 
-            </div>
+                        <input type="text" class="search-box" placeholder="Search Student">
 
-            <!-- Table -->
+                        <button class="return-btn">
+                            <i class="bi bi-arrow-left"></i> Return
+                        </button>
 
-            <div class="table-container">
+                        <button class="save-btn">
+                            <i class="bi bi-floppy"></i> Save
+                        </button>
 
-                <table>
+                        <button class="print-invoice-btn">
+                            <i class="bi bi-printer"></i> Print
+                        </button>
 
-                    <thead>
+                    </div>
 
-                        <tr>
+                </div>
+                <div class="table-container">
 
-                            <th>ID</th>
-                            <th>Student</th>
-                            <th>Course</th>
-                            <th>Amount</th>
-                            <th>Method</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                    <table>
 
-                        </tr>
+                        <thead>
 
-                    </thead>
+                            <tr>
 
-                    <tbody>
+                                <th>Invoice</th>
+                                <th>Student</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                                <th>Action</th>
 
-                        <tr>
-                            <td>TX001</td>
-                            <td>Sharara Naderi</td>
-                            <td>HTML</td>
-                            <td>$50</td>
-                            <td>Visa</td>
-                            <td>01/07/2026</td>
-                            <td><span class="paid">Paid</span></td>
-                            <td><button class="view-btn">View</button></td>
-                        </tr>
+                            </tr>
 
-                        <tr>
-                            <td>TX002</td>
-                            <td>Ahmed Ali</td>
-                            <td>CSS</td>
-                            <td>$60</td>
-                            <td>PayPal</td>
-                            <td>29/06/2026</td>
-                            <td><span class="pending">Pending</span></td>
-                            <td><button class="view-btn">View</button></td>
-                        </tr>
+                        </thead>
 
-                        <tr>
-                            <td>TX003</td>
-                            <td>Madina Qazizada</td>
-                            <td>JavaScript</td>
-                            <td>$80</td>
-                            <td>MasterCard</td>
-                            <td>28/06/2026</td>
-                            <td><span class="paid">Paid</span></td>
-                            <td><button class="view-btn">View</button></td>
-                        </tr>
+                        <tbody>
 
-                        <tr>
-                            <td>TX004</td>
-                            <td>Hajar Alizada</td>
-                            <td>Python</td>
-                            <td>$120</td>
-                            <td>Visa</td>
-                            <td>27/06/2026</td>
-                            <td><span class="failed">Failed</span></td>
-                            <td><button class="view-btn">View</button></td>
-                        </tr>
+                            <tr>
 
-                    </tbody>
+                                <td>INV001</td>
+                                <td>Sharara Naderi</td>
+                                <td>02/07/2026</td>
+                                <td>$120</td>
+                                <td>Visa</td>
+                                <td><span class="paid">Paid</span></td>
 
-                </table>
+                                <td>
+
+                                    <button class="action-btn">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </button>
+
+                                    <button class="action-btn edit-btn">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </button>
+
+                                    <button class="action-btn print-btn">
+                                        <i class="bi bi-printer-fill"></i>
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
 
             </div>
-
         </main>
-
     </div>
 
     <script>

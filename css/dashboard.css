@@ -659,12 +659,17 @@ body.dark input{
     }
 }
 
-.menu-title1 logout-link:hover{
-    background:#ef4444 !important;
-    color:white !important;
-    transform:translateX(6px);
+.sidebar-menu li.logout a{
+    color:#fff;
+    transition:0.3s;
 }
 
-.menu-title1  logout-link:hover i{
-    color:white;
+.sidebar-menu li.logout a:hover{
+    background:#ef4444 !important;
+    color:#fff;
+    border-radius:12px;
+}
+
+.sidebar-menu li.logout a:hover i{
+    color:#fff;
 }
