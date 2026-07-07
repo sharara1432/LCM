@@ -153,7 +153,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="#" onclick="logout(); return false;">
                         <div class="menu-title1">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Logout</span>
@@ -161,145 +161,22 @@
                     </a>
                 </li>
 
-
-
+            </ul>
         </aside>
 
 
+        <script>
+            function logout() {
 
-        <!-- CONTENT -->
+                let confirmLogout = confirm("Are you sure you want to logout?");
 
-        <main class="content">
+                if (confirmLogout) {
+                    window.location.href = "login.html";
+                }
 
-            <!-- TOPBAR -->
-            <nav class="topbar">
-
-                <h2>Hello Sharara </h2>
-
-                <div class="navbar-right">
-
-                    <div class="search-box">
-                        <i class="bi bi-search"></i>
-                        <input type="text" placeholder="Search...">
-                    </div>
-
-                    <!-- Dark Mode Button -->
-                    <button id="themeToggle" class="theme-btn">
-                        <i class="bi bi-moon-stars-fill"></i>
-                    </button>
-
-                    <!-- Profile -->
-                    <details class="profile-dropdown">
-
-                        <summary class="profile">
-                            <i class="bi bi-person-circle"></i>
-                            <span>Admin</span>
-                        </summary>
-
-                        <div class="dropdown-menu">
-                            <a href="#"><i class="bi bi-person"></i> My Profile</a>
-                            <a href="#"><i class="bi bi-gear"></i> Settings</a>
-                            <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
-                        </div>
-
-                    </details>
-
-                </div>
-
-            </nav>
-
-            <!-- MAIN GRID -->
-
-            <div class="dashboard-grid">
-
-                <!-- LEFT -->
-
-                <div>
-
-                    <div class="welcome-section">
-                        <h1>Welcome Back 👋</h1>
-
-                        <p>
-                            Manage students, courses, assignments and track learning progress.
-                        </p>
-                    </div>
-
-
-                    <!-- CARDS -->
-
-                    <section class="cards">
-
-                        <div class="card-box">
-                            <i class="bi bi-people-fill"></i>
-                            <h3>250</h3>
-                            <p>Total Students</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-book-fill"></i>
-                            <h3>20</h3>
-                            <p>Courses</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-eye"></i>
-                            <h3>45</h3>
-                            <p>View</p>
-                        </div>
-
-                        <div class="card-box">
-                            <i class="bi bi-person-workspace"></i>
-                            <h3>12</h3>
-                            <p>Instructors</p>
-                        </div>
-
-                    </section>
-
-                </div>
-
-                <!-- RIGHT -->
-
-                <div>
-
-                    <section class="activity-section">
-
-                        <h2>Recent Activity</h2>
-
-                        <div class="activity-box">
-
-                            <p>📚 New Course Added - Web Development</p>
-
-                            <p>👨‍🎓 Student Enrolled in Python Course</p>
-
-                            <p>📝 Assignment Uploaded</p>
-
-                            <p>🎯 Quiz Scheduled For Next Week</p>
-
-                        </div>
-
-                    </section>
-
-                </div>
-
-            </div>
-
-        </main>
-
-    </div>
+            }
+        </script>
 
 </body>
-<script>
-    document.querySelectorAll('.menu-header').forEach(menu => {
-
-        menu.addEventListener('click', () => {
-
-            const parent = menu.parentElement;
-
-            parent.classList.toggle('active');
-
-        });
-
-    });
-</script>
 
 </html>

@@ -191,24 +191,23 @@ body{
     0 10px 20px rgba(0,0,0,.15);
 }
 
-/* Active Dashboard */
+/* Active Main Menu */
 
-.sidebar-menu li.active a{
+.sidebar-menu > li.active > a,
+.sidebar-menu > li.active > .menu-header{
 
-    background:
-    linear-gradient(
+    background:linear-gradient(
         90deg,
         #7c3aed,
         #4f46e5,
         #38bdf8
     );
 
-    color:white;
+    color:#fff;
 
     border:none;
 
-    box-shadow:
-    0 10px 25px rgba(79,70,229,.45);
+    box-shadow:0 10px 25px rgba(79,70,229,.45);
 }
 /* ======================
    SUBMENU

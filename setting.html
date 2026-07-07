@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechBright LMS Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/varaible.css">
+    <link rel="stylesheet" href="css/side.css">
+    <link rel="stylesheet" href="css/setting.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+
+            <!-- Logo -->
+            <div class="sidebar-logo">
+                <img src="Images/logo.png" alt="Logo">
+
+                <div class="logo-text">
+                    <h2>TechBright</h2>
+                    <p>Computer Learning</p>
+                </div>
+            </div>
+
+
+
+            <!-- SIDEBAR -->
+
+            <ul class="sidebar-menu">
+
+                <li class="active">
+                    <a href="index.html">
+                        <div class="menu-title">
+                            <i class="bi bi-grid-fill"></i>
+                            <span>Dashboard</span>
+                        </div>
+                    </a>
+                </li>
+
+                <!-- Users -->
+                <li class="has-submenu">
+
+                    <div class="menu-header">
+                        <div class="menu-title">
+                            <i class="bi bi-people-fill"></i>
+                            <span>Users</span>
+                        </div>
+
+                        <i class="bi bi-chevron-down arrow"></i>
+                    </div>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="user.html">
+                                <i class="bi bi-list-ul"></i>
+                                All Users
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="create-users.html">
+                                <i class="bi bi-plus-circle"></i>
+                                Create User
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <!-- Courses -->
+                <li class="has-submenu">
+
+                    <div class="menu-header">
+                        <div class="menu-title">
+                            <i class="bi bi-book-fill"></i>
+                            <span>Courses</span>
+                        </div>
+
+                        <i class="bi bi-chevron-down arrow"></i>
+                    </div>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="course.html">
+                                <i class="bi bi-list-ul"></i>
+                                All Courses
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="create-course.html">
+                                <i class="bi bi-plus-circle"></i>
+                                Create Course
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="addTopic.html">
+                                <i class="bi bi-plus-circle"></i>
+                                Add Topic
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="comment.html">
+                        <div class="menu-title">
+                            <i class="bi bi-grid-fill"></i>
+                            <span>Comment</span>
+                        </div>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="transaction.html">
+                        <i class="bi bi-credit-card-fill"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="activity-log.html">
+                        <i class="bi bi-clock-history"></i>
+                        <span>Activity Logs</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="setting.html">
+                        <div class="menu-title">
+                            <i class="bi bi-gear-fill"></i>
+                            <span>Setting</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="logout.html">
+                        <div class="menu-title1">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Logout</span>
+                        </div>
+                    </a>
+                </li>
+
+
+
+        </aside>
+        <!-- Content -->
+
+        <main class="content">
+
+            <!-- Topbar -->
+
+            <nav class="topbar">
+
+                <h2>Settings</h2>
+
+                <div class="navbar-right">
+
+                    <div class="search-box">
+
+                        <i class="bi bi-search"></i>
+
+                        <input type="text" placeholder="Search...">
+
+                    </div>
+
+                    <details class="profile-dropdown">
+
+                        <summary class="profile">
+
+                            <i class="bi bi-person-circle"></i>
+
+                            <span>Admin</span>
+
+                        </summary>
+
+                        <div class="dropdown-menu">
+
+                            <a href="#"><i class="bi bi-person"></i> My Profile</a>
+                            <a href="#"><i class="bi bi-gear"></i> Settings</a>
+                            <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+
+                        </div>
+
+                    </details>
+
+                </div>
+
+            </nav>
+
+            <!-- =========================================================
+     NOTIFICATION SETTINGS
+========================================================= -->
+            <!-- ==========================
+     ACCOUNT INFORMATION
+========================== -->
+
+            <h5 class="mb-4 text-primary">
+                <i class="bi bi-person-circle"></i>
+                Account Information
+            </h5>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control" value="Sharara Naderi">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" value="admin@techbright.com">
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" value="+91 9953827976">
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <label class="form-label">Institute</label>
+                    <input type="text" class="form-control" value="TechBright Computer Learning">
+                </div>
+
+            </div>
+            <hr>
+
+            <h5 class="mb-4 text-primary">
+                <i class="bi bi-bell-fill"></i>
+                Notification Preferences
+            </h5>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Student Registration</label>
+                    <select class="form-select">
+                        <option selected>Email + Dashboard</option>
+                        <option>Dashboard Only</option>
+                        <option>Email Only</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Course Enrollment</label>
+                    <select class="form-select">
+                        <option selected>Dashboard Only</option>
+                        <option>Email + Dashboard</option>
+                        <option>Email Only</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Payment Notifications</label>
+                    <select class="form-select">
+                        <option selected>Email + Dashboard</option>
+                        <option>Dashboard Only</option>
+                        <option>Email Only</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Comments & Reviews</label>
+                    <select class="form-select">
+                        <option selected>Dashboard Only</option>
+                        <option>Email + Dashboard</option>
+                        <option>Email Only</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">System Alerts</label>
+                    <select class="form-select">
+                        <option selected>High Priority</option>
+                        <option>Medium Priority</option>
+                        <option>Low Priority</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Notification Sound</label>
+                    <select class="form-select">
+                        <option selected>Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-4">
+                    <label class="form-label">Desktop Notifications</label>
+                    <select class="form-select">
+                        <option selected>Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- =========================================================
+     APPEARANCE
+========================================================= -->
+
+            <hr>
+
+            <h5 class="mb-4 text-primary">
+                <i class="bi bi-palette-fill"></i>
+                Appearance
+            </h5>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Theme</label>
+                    <select class="form-select">
+                        <option selected>Light</option>
+                        <option>Dark</option>
+                        <option>System Default</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Accent Color</label>
+                    <select class="form-select">
+                        <option selected>Blue</option>
+                        <option>Green</option>
+                        <option>Purple</option>
+                        <option>Orange</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-4">
+                    <label class="form-label">Sidebar Layout</label>
+                    <select class="form-select">
+                        <option selected>Expanded</option>
+                        <option>Collapsed</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- =========================================================
+     COURSE SETTINGS
+========================================================= -->
+
+            <hr>
+
+            <h5 class="mb-4 text-primary">
+                <i class="bi bi-book-fill"></i>
+                Course Settings
+            </h5>
+
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Default Status</label>
+                    <select class="form-select">
+                        <option selected>Published</option>
+                        <option>Draft</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Enrollment</label>
+                    <select class="form-select">
+                        <option selected>Open</option>
+                        <option>Approval Required</option>
+                        <option>Closed</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <label class="form-label">Certificate</label>
+                    <select class="form-select">
+                        <option selected>Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- =========================================================
+     SECURITY & ACCESS
+========================================================= -->
+
+            <hr>
+
+            <h5 class="mb-4 text-primary">
+                <i class="bi bi-shield-lock-fill"></i>
+                Security & Access
+            </h5>
+
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Auto Logout</label>
+                    <select class="form-select">
+                        <option>10 Minutes</option>
+                        <option>20 Minutes</option>
+                        <option selected>30 Minutes</option>
+                        <option>1 Hour</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Login Attempts</label>
+                    <select class="form-select">
+                        <option>3 Attempts</option>
+                        <option selected>5 Attempts</option>
+                        <option>10 Attempts</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <label class="form-label">Session Timeout</label>
+                    <select class="form-select">
+                        <option>15 Minutes</option>
+                        <option selected>30 Minutes</option>
+                        <option>1 Hour</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- =========================================================
+     BACKUP & RECOVERY
+========================================================= -->
+
+            <hr>
+
+            <h5 class="mb-4 text-primary">
+                <i class="bi bi-cloud-arrow-up-fill"></i>
+                Backup & Recovery
+            </h5>
+
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Automatic Backup</label>
+                    <select class="form-select">
+                        <option selected>Daily</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">Backup Time</label>
+                    <select class="form-select">
+                        <option>12:00 AM</option>
+                        <option>01:00 AM</option>
+                        <option selected>02:00 AM</option>
+                        <option>03:00 AM</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <label class="form-label">Retention</label>
+                    <select class="form-select">
+                        <option>7 Days</option>
+                        <option selected>30 Days</option>
+                        <option>90 Days</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button class="btn btn-outline-primary mb-4">
+                <i class="bi bi-cloud-download-fill"></i>
+                Backup Now
+            </button>
+
+
+            <!-- =========================================================
+     SYSTEM INFORMATION
+========================================================= -->
+
+            <hr>
+
+            <h5 class="mb-4 text-primary">
+                <i class="bi bi-info-circle-fill"></i>
+                System Information
+            </h5>
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered align-middle">
+
+                    <tbody>
+
+                        <tr>
+                            <th width="30%">LMS Version</th>
+                            <td>TechBright LMS v2.5.0</td>
+                        </tr>
+
+                        <tr>
+                            <th>Database</th>
+                            <td>MySQL 8.0</td>
+                        </tr>
+
+                        <tr>
+                            <th>Server Status</th>
+                            <td><span class="badge bg-success">Online</span></td>
+                        </tr>
+
+                        <tr>
+                            <th>Last Updated</th>
+                            <td>07 July 2026</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- =========================================================
+     BUTTONS
+========================================================= -->
+
+            <div class="text-end mt-5">
+
+                <a href="index.html" class="btn btn-secondary me-2">
+                    Cancel
+                </a>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-check-circle-fill"></i>
+                    Save Changes
+                </button>
+
+            </div>
+
+            </form>
+
+    </div>
+
+    </div>
+
+    </main>
+
+    </div>
+
+</body>
+<script>
+    document.querySelectorAll('.menu-header').forEach(menu => {
+
+        menu.addEventListener('click', () => {
+
+            const parent = menu.parentElement;
+
+            parent.classList.toggle('active');
+
+        });
+
+    });
+</script>
+
+</html>

@@ -39,3 +39,30 @@
     background:rgba(255,255,255,.2);
     border-radius:10px;
 }
+
+/* Active Main Menu */
+
+.sidebar-menu > li.active > a,
+.sidebar-menu > li.active > .menu-header{
+
+    background:linear-gradient(
+        90deg,
+        #7c3aed,
+        #4f46e5,
+        #38bdf8
+    );
+
+    color:#fff;
+
+    border:none;
+
+    box-shadow:0 10px 25px rgba(79,70,229,.45);
+}
+.submenu li.active > a{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    border:none;
+}
