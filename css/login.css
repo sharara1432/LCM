@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body {
+    background: #ececf9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.container {
+    width: 1100px;
+    min-height:720px;
+    height:auto;
+    background: white;
+    border-radius: 25px;
+    display: flex;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    position: relative;
+}
+
+/* hide radio */
+input[type=radio] {
+    display: none;
+}
+
+/* LEFT */
+.left {
+    width: 45%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #7b2be2;
+}
+
+.logo h2 {
+    font-size: 28px;
+    color: #444;
+}
+
+.tabs {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.tabs label {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    color: #777;
+    transition: .3s;
+}
+
+#login:checked~.left .tabs label:nth-child(1) {
+    color: #7b2be2;
+}
+
+#register:checked~.left .tabs label:nth-child(2) {
+    color: #7b2be2;
+}
+
+.forms {
+    overflow: hidden;
+}
+
+.slider {
+    width: 200%;
+    display: flex;
+    transition: .5s;
+}
+
+.form {
+    width: 50%;
+    padding-right: 40px;
+}
+
+#register:checked~.left .slider {
+    transform: translateX(-50%);
+}
+
+.form h1{
+    font-size:34px;
+    margin-bottom:5px;
+}
+
+.form p{
+    margin-bottom:15px;
+}
+
+.form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: none;
+    background: #f3f1ff;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.row a {
+   display: flex;
+    align-items: center;
+    gap: 10px;              
+    margin: 15px 0 25px;
+    font-size: 15px;
+    color: #555;
+    cursor: pointer;
+}
+
+button {
+    width: 180px;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #1a0e88, #3b10d6);
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(130, 0, 255, .3);
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+/* Remember Me Checkbox */
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 10px;              
+    margin: 15px 0 25px;
+    font-size: 15px;
+    color: #555;
+    cursor: pointer;
+}
+
+.remember input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #3b10d6;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* RIGHT */
+.right {
+    width: 55%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.right img {
+    width:500px;
+    position: relative;
+    z-index: 5;
+}
+
+/* Responsive */
+@media(max-width:1000px) {
+    .container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        display: none;
+    }
+}

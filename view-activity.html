@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/varaible.css">
     <link rel="stylesheet" href="css/side.css">
-    <link rel="stylesheet" href="css/activity-log.css">
+    <link rel="stylesheet" href="css/transaction.css">
+    <link rel="stylesheet" href="css/view-activity.css">
 
 </head>
 
@@ -213,181 +214,98 @@
 
             </nav>
 
-
-
             <!-- ===========================
      PAGE HEADER
 =========================== -->
+            <div class="container mt-5">
 
-            <div class="page-header">
+                <div class="details-card">
 
-                <div class="page-title">
                     <h2>
-                        <i class="bi bi-clock-history"></i>
-                        Activity Logs
+                        <i class="bi bi-person-lines-fill"></i>
+                        Activity Information
                     </h2>
 
-                    <p>View all user and administrator activities in the TechBright LMS.</p>
+                    <form>
+
+                        <div class="row mb-3">
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">Email</label>
+
+                                <input type="email" class="form-control" value="sharara@gmail.com" readonly>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">IP Address</label>
+
+                                <input type="text" class="form-control" value="192.168.1.25" readonly>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row mb-3">
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">Browser</label>
+
+                                <input type="text" class="form-control" value="Google Chrome" readonly>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">Date</label>
+
+                                <input type="text" class="form-control" value="02 July 2026" readonly>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row mb-4">
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">Current Status</label>
+
+                                <select class="form-select">
+
+                                    <option selected>Active</option>
+
+                                    <option>Suspended</option>
+
+                                    <option>Blocked</option>
+
+                                    <option>Dropped</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="text-end">
+
+                            <a href="activity-log.html" class="btn btn-secondary btn-back">
+                                <i class="bi bi-arrow-left"></i> Back
+                            </a>
+
+                            <button type="submit" class="btn btn-primary btn-update">
+                                <i class="bi bi-check-circle"></i>
+                                Update Status
+                            </button>
+
+                        </div>
+
+                    </form>
+
                 </div>
-
-            </div>
-
-            <!-- ===========================
-     SUMMARY CARDS
-=========================== -->
-
-            <div class="summary-cards">
-
-                <div class="card-box">
-                    <i class="bi bi-activity"></i>
-                    <h3>1,540</h3>
-                    <p>Total Activities</p>
-                </div>
-
-                <div class="card-box">
-                    <i class="bi bi-box-arrow-in-right"></i>
-                    <h3>320</h3>
-                    <p>Today's Logins</p>
-                </div>
-
-                <div class="card-box">
-                    <i class="bi bi-person-check-fill"></i>
-                    <h3>78</h3>
-                    <p>Active Users</p>
-                </div>
-
-                <div class="card-box">
-                    <i class="bi bi-person-lock"></i>
-                    <h3>5</h3>
-                    <p>Blocked Users</p>
-                </div>
-
-            </div>
-
-            <!-- ===========================
-     SEARCH
-=========================== -->
-
-            <div class="table-header">
-
-                <input type="text" placeholder="Search by user or activity...">
-
-                <button class="export-btn">
-                    <i class="bi bi-download"></i>
-                    Export Logs
-                </button>
-
-            </div>
-
-            <!-- ===========================
-     TABLE
-=========================== -->
-
-            <div class="table-responsive">
-
-                <table class="activity-table">
-
-                    <thead>
-
-                        <tr>
-
-                            <th>Log ID</th>
-                            <th>Date & Time</th>
-                            <th>User</th>
-                            <th>Role</th>
-                            <th>Activity</th>
-                            <th>Module</th>
-                            <th>Status</th>
-                            <th>Action</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>LOG004</td>
-                            <td>02 Jul 2026 10:40 AM</td>
-                            <td>Bashir Hussein</td>
-                            <td>Instructor/Admin</td>
-                            <td>Added New Topic</td>
-                            <td>Courses</td>
-                            <td><span class="success">Created</span></td>
-                            <td>
-                                <a href="view-activity.html" class="view-btn">
-                                    <i class="bi bi-eye-fill"></i>
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>LOG001</td>
-                            <td>02 Jul 2026 09:10 AM</td>
-                            <td>Sharara Naderi</td>
-                            <td>Admin</td>
-                            <td>Created HTML Course</td>
-                            <td>Courses</td>
-                            <td><span class="success">Success</span></td>
-                            <td>
-                                <a href="view-activity.html" class="view-btn">
-                                    <i class="bi bi-eye-fill"></i>
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>LOG003</td>
-                            <td>02 Jul 2026 10:15 AM</td>
-                            <td>Madina Qazizada</td>
-                            <td>Student</td>
-                            <td>Submitted HTML Assignment</td>
-                            <td>Assignments</td>
-                            <td><span class="success">Submitted</span></td>
-                            <td>
-                                <a href="view-activity.html" class="view-btn">
-                                    <i class="bi bi-eye-fill"></i>
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td>LOG005</td>
-                            <td>02 Jul 2026 11:20 AM</td>
-                            <td>Hajar Alizada</td>
-                            <td>Student</td>
-                            <td>Posted a Comment</td>
-                            <td>Comments</td>
-                            <td><span class="success">Posted</span></td>
-                            <td>
-                                <a href="view-activity.html" class="view-btn">
-                                    <i class="bi bi-eye-fill"></i>
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>LOG009</td>
-                            <td>02 Jul 2026 02:05 PM</td>
-                            <td>Mubarka Mohammad Zada</td>
-                            <td>Admin</td>
-                            <td>Generated Invoice</td>
-                            <td>Transactions</td>
-                            <td><span class="success">Generated</span></td>
-                            <td>
-                                <a href="view-activity.html" class="view-btn">
-                                    <i class="bi bi-eye-fill"></i>
-                                    View
-                                </a>
-                            </td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
 
             </div>
 

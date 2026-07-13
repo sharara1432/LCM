@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechBright LMS Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/varaible.css">
+    <link rel="stylesheet" href="css/side.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+
+            <!-- Logo -->
+            <div class="sidebar-logo">
+                <img src="Images/logo.png" alt="Logo">
+
+                <div class="logo-text">
+                    <h2>TechBright</h2>
+                    <p>Computer Learning</p>
+                </div>
+            </div>
+
+
+
+            <!-- SIDEBAR -->
+
+            <ul class="sidebar-menu">
+
+                <li class="active">
+                    <a href="index.html">
+                        <div class="menu-title">
+                            <i class="bi bi-grid-fill"></i>
+                            <span>Dashboard</span>
+                        </div>
+                    </a>
+                </li>
+
+                <!-- Users -->
+                <li class="has-submenu">
+
+                    <div class="menu-header">
+                        <div class="menu-title">
+                            <i class="bi bi-people-fill"></i>
+                            <span>Users</span>
+                        </div>
+
+                        <i class="bi bi-chevron-down arrow"></i>
+                    </div>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="user.html">
+                                <i class="bi bi-list-ul"></i>
+                                All Users
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="create-users.html">
+                                <i class="bi bi-plus-circle"></i>
+                                Create User
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <!-- Courses -->
+                <li class="has-submenu">
+
+                    <div class="menu-header">
+                        <div class="menu-title">
+                            <i class="bi bi-book-fill"></i>
+                            <span>Courses</span>
+                        </div>
+
+                        <i class="bi bi-chevron-down arrow"></i>
+                    </div>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="course.html">
+                                <i class="bi bi-list-ul"></i>
+                                All Courses
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="create-course.html">
+                                <i class="bi bi-plus-circle"></i>
+                                Create Course
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="addTopic.html">
+                                <i class="bi bi-plus-circle"></i>
+                                Add Topic
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="comment.html">
+                        <div class="menu-title">
+                            <i class="bi bi-grid-fill"></i>
+                            <span>Comment</span>
+                        </div>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="transaction.html">
+                        <i class="bi bi-credit-card-fill"></i>
+                        <span>Transactions</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="activity-log.html">
+                        <i class="bi bi-clock-history"></i>
+                        <span>Activity Logs</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="setting.html">
+                        <div class="menu-title">
+                            <i class="bi bi-gear-fill"></i>
+                            <span>Setting</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="logout.html">
+                        <div class="menu-title1">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Logout</span>
+                        </div>
+                    </a>
+                </li>
+
+
+
+        </aside>
+
+        <!-- MAIN GRID -->
+
+        <body>
+
+            <div class="wrapper">
+
+                <main class="content">
+
+                    <!-- TOPBAR -->
+                    <nav class="topbar">
+
+                        <h2>Admin Profile</h2>
+
+                        <div class="navbar-right">
+
+                            <div class="search-box">
+                                <i class="bi bi-search"></i>
+                                <input type="text" placeholder="Search...">
+                            </div>
+
+                            <button id="themeToggle" class="theme-btn">
+                                <i class="bi bi-moon-stars-fill"></i>
+                            </button>
+
+                            <details class="profile-dropdown">
+
+                                <summary class="profile">
+                                    <i class="bi bi-person-circle"></i>
+                                    <span>Admin</span>
+                                </summary>
+
+                                <div class="dropdown-menu">
+                                    <a href="admin-profile.html">
+                                        <i class="bi bi-person"></i> My Profile
+                                    </a>
+
+                                    <a href="setting.html">
+                                        <i class="bi bi-gear"></i> Settings
+                                    </a>
+
+                                    <a href="logout.html">
+                                        <i class="bi bi-box-arrow-right"></i> Logout
+                                    </a>
+                                </div>
+
+                            </details>
+
+                        </div>
+
+                    </nav>
+
+                    <section class="profile-page">
+
+                        <!-- HEADER -->
+
+                        <div class="page-header">
+
+                            <div>
+
+                                <h1>Administrator Profile</h1>
+
+                                <p>
+                                    Manage your personal information and account settings.
+                                </p>
+
+                            </div>
+
+                            <div class="profile-actions">
+
+                                <button class="btn btn-outline-primary">
+                                    <i class="bi bi-key"></i>
+                                    Change Password
+                                </button>
+
+                                <button class="btn btn-primary">
+                                    <i class="bi bi-pencil-square"></i>
+                                    Edit Profile
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- PROFILE GRID -->
+
+                        <div class="profile-grid">
+
+                            <!-- LEFT CARD -->
+
+                            <div class="profile-card">
+
+                                <img src="Images/avatar.png" alt="Admin">
+
+                                <h3>Sharara Naderi</h3>
+
+                                <p class="role">Administrator</p>
+
+                                <span class="status">
+                                    <i class="bi bi-circle-fill"></i>
+                                    Active
+                                </span>
+
+                            </div>
+
+                            <!-- RIGHT CARD -->
+
+                            <div class="info-card">
+
+                                <h4>Personal Information</h4>
+
+                                <div class="info">
+
+                                    <div>
+                                        <label>Full Name</label>
+                                        <p>Sharara Naderi</p>
+                                    </div>
+
+                                    <div>
+                                        <label>Username</label>
+                                        <p>admin</p>
+                                    </div>
+
+                                    <div>
+                                        <label>Email</label>
+                                        <p>admin@techbright.com</p>
+                                    </div>
+
+                                    <div>
+                                        <label>Phone</label>
+                                        <p>+91 9876543210</p>
+                                    </div>
+
+                                    <div>
+                                        <label>Department</label>
+                                        <p>Management</p>
+                                    </div>
+
+                                    <div>
+                                        <label>Role</label>
+                                        <p>Administrator</p>
+                                    </div>
+
+                                    <div>
+                                        <label>Last Login</label>
+                                        <p>10 July 2026</p>
+                                    </div>
+
+                                    <div>
+                                        <label>Account Status</label>
+                                        <p>Active</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ACTIVITY -->
+
+                        <div class="activity-card">
+
+                            <h4>Recent Login Activity</h4>
+
+                            <table class="table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Date</th>
+
+                                        <th>Device</th>
+
+                                        <th>Location</th>
+
+                                        <th>Status</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>10 Jul 2026</td>
+
+                                        <td>Chrome</td>
+
+                                        <td>Localhost</td>
+
+                                        <td><span class="badge bg-success">Success</span></td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>09 Jul 2026</td>
+
+                                        <td>Edge</td>
+
+                                        <td>Localhost</td>
+
+                                        <td><span class="badge bg-success">Success</span></td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>08 Jul 2026</td>
+
+                                        <td>Chrome</td>
+
+                                        <td>Localhost</td>
+
+                                        <td><span class="badge bg-success">Success</span></td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </section>
+
+
+
+        </body>
+        </main>
+
+    </div>
+
+</body>
+<script>
+    document.querySelectorAll('.menu-header').forEach(menu => {
+
+        menu.addEventListener('click', () => {
+
+            const parent = menu.parentElement;
+
+            parent.classList.toggle('active');
+
+        });
+
+    });
+</script>
+
+</html>
